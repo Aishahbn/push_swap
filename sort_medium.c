@@ -6,7 +6,7 @@
 /*   By: abaninas <abaninas@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/18 14:45:21 by abaninas          #+#    #+#             */
-/*   Updated: 2026/11/18 15:41:08 by abaninas         ###   ########.fr       */
+/*   Updated: 2026/11/18 16:50:37 by abaninas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,14 @@ void    set_index(t_stack *stack)
         current->index = index;
         current = current->next;
     }
+}
+
+int get_chunk_size(int size)
+{
+    int i;
+
+    i = 1;
+    while (i * i < size)
+    i++;
+    return (i);
 }
